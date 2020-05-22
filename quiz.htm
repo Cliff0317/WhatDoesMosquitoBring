@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <title>測驗</title>
+    <style>
+        select {
+            width: auto;
+            height: 40px;
+            font-size: 25px;
+        }
+        body {
+            font-family: Microsoft JhengHei;
+            background-color: black;
+            color: white;
+        }
+        button {
+            font-size: medium;
+            box-shadow: none;
+            border-style: none;
+        }
+        .styled {
+            background-color:red;
+            color: white;
+        }
+        .func {
+            margin-left: 5px;
+        }
+        #secondLine {
+            margin-top: 10px;
+        }
+        #checkBtn {
+            margin-top: 10px;
+            background-color: grey;
+            color: white;
+        }
+        a {
+            color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <h1>測驗</h1><sup><a id="main" href="main.htm">返回首頁</a></sup>
+
+    <p>題目：</p>
+    <p style="font-size: large; font-style: italic;" id="question"></p>
+    <select id="answer"></select><br>
+    <button onclick="check()" id="checkBtn">檢查答案</button><br>
+    <div id="secondLine">
+        <button onclick="last()" class="styled">上一個問題</button>
+        <button onclick="next()" class="styled func">下一個問題</button>
+    </div>
+    <audio id="correct">
+        <source src="correct.mp3">
+    </audio>
+    <audio id="wrong">
+        <source src="wrong.mp3">
+    </audio>
+    <script src="quiz.js"></script>
+</body>
